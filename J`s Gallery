@@ -1,0 +1,107 @@
+/* =============================================
+   Global styles
+   ============================================= */
+
+body {
+  font-family: Georgia, serif;
+  background-color: #d0d0d0; /* Grey page background */
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =============================================
+   Header — title and navigation
+   ============================================= */
+
+header {
+  text-align: center;
+  padding: 16px 24px 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Page title */
+h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+/* Navigation bar — flexbox to space links evenly */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  padding: 8px 0 16px;
+}
+
+nav a {
+  color: #0000ee;
+  text-decoration: underline;
+  font-size: 1rem;
+}
+
+nav a:visited {
+  color: #551a8b;
+}
+
+
+/* =============================================
+   Intro section — text with floated image
+   ============================================= */
+
+.intro {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 16px 24px;
+
+  /* Use flow layout so text wraps around the floated image */
+  overflow: hidden; /* Clears the float so the section fully contains it */
+}
+
+/* Image floated to the right so text wraps around it */
+.intro-image {
+  float: right;
+  width: 380px;
+  height: 370px;
+  object-fit: cover;    /* Crop the image to fill the box */
+  margin-left: 20px;
+  margin-bottom: 8px;
+}
+
+.intro p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+
+/* =============================================
+   Gallery section — rows of images and video
+   ============================================= */
+
+.gallery {
+  /* Remove any gap between gallery and page edges */
+  width: 100%;
+}
+
+/* Each row is a flexbox container so items sit side by side */
+.gallery-row {
+  display: flex;
+  width: 100%;
+}
+
+/* All images and the video share the same height */
+.gallery-row img,
+.gallery-row video {
+  height: 250px;
+  object-fit: cover;  /* Crop to fill height without distorting */
+  flex: 1;            /* Each item grows equally to fill the row width */
+  display: block;     /* Remove inline spacing below images */
+}
+
+/* The video in row 1 gets more width than the image beside it */
+.gallery-row video {
+  flex: 1.5;
+}
