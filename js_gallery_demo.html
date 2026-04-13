@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>J's Gallery</title>
+  <style>
+    /* =============================================
+       Global styles
+       ============================================= */
+
+    body {
+      font-family: Georgia, serif;
+      background-color: #d0d0d0;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* =============================================
+       Header — title and navigation
+       ============================================= */
+
+    header {
+      text-align: center;
+      padding: 16px 24px 0;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 80px;
+      padding: 8px 0 16px;
+    }
+
+    nav a {
+      color: #0000ee;
+      text-decoration: underline;
+      font-size: 1rem;
+    }
+
+    nav a:visited {
+      color: #551a8b;
+    }
+
+    /* =============================================
+       Intro section
+       ============================================= */
+
+    .intro {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 16px 24px;
+      overflow: hidden;
+    }
+
+    .intro-image {
+      float: right;
+      width: 380px;
+      height: 370px;
+      object-fit: cover;
+      margin-left: 20px;
+      margin-bottom: 8px;
+    }
+
+    .intro p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    /* =============================================
+       Gallery section
+       ============================================= */
+
+    .gallery {
+      width: 100%;
+    }
+
+    .gallery-row {
+      display: flex;
+      width: 100%;
+    }
+
+    .gallery-row img,
+    .gallery-row video {
+      height: 250px;
+      object-fit: cover;
+      flex: 1;
+      display: block;
+    }
+
+    .gallery-row video {
+      flex: 1.5;
+    }
+
+    /* =============================================
+       Placeholder styling (replaces real images)
+       ============================================= */
+
+    .placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Georgia, serif;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.85);
+      letter-spacing: 0.05em;
+    }
+
+    .ph1 { background: #7a8c6e; }
+    .ph2 { background: #5c7a8c; }
+    .ph3 { background: #8c6e5c; }
+    .ph4 { background: #6e5c8c; }
+    .ph5 { background: #8c7a5c; }
+    .ph6 { background: #5c8c7a; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>J's Gallery</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Portfolio</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Intro section: floated image + text -->
+  <section class="intro">
+    <!-- Placeholder for intro image (right-floated) -->
+    <div class="intro-image placeholder ph1">[ Intro Photo ]</div>
+
+    <p>Welcome to J's Gallery — a curated collection of photography capturing moments, landscapes, and stories from around the world. Each image is carefully selected to evoke emotion and invite the viewer into a different perspective.</p>
+    <p>Browse the gallery below to explore the full collection. Prints are available for purchase — please visit the contact page for enquiries.</p>
+    <p>Photography has always been about finding the extraordinary in the ordinary. Whether it's the play of light on a quiet street or the vast stillness of an open landscape, every shot tells a story worth telling.</p>
+    <p>Thank you for visiting. I hope you find something here that resonates with you.</p>
+  </section>
+
+  <!-- Gallery: two rows of images and video -->
+  <section class="gallery">
+
+    <!-- Row 1: image + video -->
+    <div class="gallery-row">
+      <div class="placeholder ph2" style="flex:1; height:250px;">[ Photo 1 ]</div>
+      <div class="placeholder ph3" style="flex:1.5; height:250px;">[ Video ]</div>
+    </div>
+
+    <!-- Row 2: three images -->
+    <div class="gallery-row">
+      <div class="placeholder ph4" style="flex:1; height:250px;">[ Photo 2 ]</div>
+      <div class="placeholder ph5" style="flex:1; height:250px;">[ Photo 3 ]</div>
+      <div class="placeholder ph6" style="flex:1; height:250px;">[ Photo 4 ]</div>
+    </div>
+
+  </section>
+
+</body>
+</html>
